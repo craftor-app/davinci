@@ -4,15 +4,12 @@ version: 2.1.1
 homepage: https://github.com/Imgkl/davinci
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  sdk: ">=2.12.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  path_provider: ^2.0.15
-  open_filex: ^4.3.2
-  gallery_saver: ^2.3.2
 
 dev_dependencies:
   flutter_test:
