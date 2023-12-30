@@ -56,8 +56,6 @@ class DavinciCapture {
     /// create a new build owner
     final BuildOwner buildOwner = BuildOwner(focusManager: FocusManager());
 
-    Size logicalSize =
-        View.of(context).physicalSize / View.of(context).devicePixelRatio;
     pixelRatio ??= View.of(context).devicePixelRatio;
     try {
       final RenderView renderView = RenderView(
@@ -65,7 +63,6 @@ class DavinciCapture {
         child: RenderPositionedBox(
             alignment: Alignment.center, child: repaintBoundary),
         configuration: ViewConfiguration(
-          size: size ?? logicalSize,
           devicePixelRatio: 1.0,
         ),
       );
