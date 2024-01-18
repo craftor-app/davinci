@@ -85,7 +85,11 @@ class DavinciCapture {
         child: RenderPositionedBox(
             alignment: Alignment.center, child: repaintBoundary),
         configuration: ViewConfiguration(
+<<<<<<< Updated upstream
           size: logicalSize,
+=======
+          size: size ?? logicalSize,
+>>>>>>> Stashed changes
           devicePixelRatio: 1.0,
         ),
       );
