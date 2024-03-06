@@ -58,24 +58,6 @@ class AppState extends State<App> {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.only(top: 30.0),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff9795EF),
-                ),
-                onPressed: () async {
-                  ///4. pass the globalKey varible to DavinciCapture.click.
-                  image = await DavinciCapture.click(
-                      context: context, imageKey, pixelRatio: 3);
-                  setState(() {});
-                },
-                child: const Text('Capture widget in screen',
-                    style: TextStyle(
-                      color: Colors.white,
-                    )),
-              ),
-            ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xff9795EF),

@@ -62,6 +62,14 @@ class DavinciCapture {
     try {
       final RenderView renderView = RenderView(
         view: View.of(context),
+        configuration: ViewConfiguration(
+          physicalConstraints: BoxConstraints.fromViewConstraints(
+              View.of(context).physicalConstraints),
+          logicalConstraints: BoxConstraints(
+            maxWidth: logicalSize.width,
+            maxHeight: logicalSize.height,
+          ),
+        ),
         child: RenderPositionedBox(
             alignment: Alignment.center, child: repaintBoundary),
         // configuration: ViewConfiguration(
@@ -122,6 +130,7 @@ class DavinciCapture {
       return await _createImageProcess(
           repaintBoundary: repaintBoundary, pixelRatio: pixelRatio);
     } catch (e) {
+      print(e);
       return null;
     }
   }
