@@ -64,15 +64,15 @@ class DavinciCapture {
         view: View.of(context),
         child: RenderPositionedBox(
             alignment: Alignment.center, child: repaintBoundary),
-        configuration: ViewConfiguration(
-          constraints: ui.ViewConstraints(
-            maxHeight: size?.height ?? logicalSize.height,
-            maxWidth: size?.width ?? logicalSize.width,
-            minHeight: size?.height ?? logicalSize.height,
-            minWidth: size?.width ?? logicalSize.width,
-          ),
-          devicePixelRatio: 1.0,
-        ),
+        // configuration: ViewConfiguration(
+        //   constraints: ui.ViewConstraints(
+        //     maxHeight: size?.height ?? logicalSize.height,
+        //     maxWidth: size?.width ?? logicalSize.width,
+        //     minHeight: size?.height ?? logicalSize.height,
+        //     minWidth: size?.width ?? logicalSize.width,
+        //   ),
+        //   devicePixelRatio: 1.0,
+        // ),
       );
 
       /// setting the rootNode to the renderview of the widget
